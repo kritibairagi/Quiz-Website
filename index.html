@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <!-- Start Quiz Button -->
+    <div class="start_btn">
+      <button id="start">Start Quiz</button>
+    </div>
+
+    <!-- Info Box -->
+    <div class="info_box hidden">
+      <div class="title"><span>Some Rules of this Quiz</span></div>
+      <div class="info_list">
+        <div class="info">
+          1. You will have only <span>15 seconds</span> per each question.
+        </div>
+        <div class="info">
+          2. You can't select multiple answers.
+        </div>
+        <div class="info">
+          3. You can't exit from the quiz while you're playing.
+        </div>
+        <div class="info">
+          4. You'll get points based on your correct answers.
+        </div>
+      </div>
+      <div class="btn">
+        <button class="quit_btn" id="quit">Quit Quiz</button>
+        <button class="continue_btn" id="continue">Continue</button>
+      </div>
+    </div>
+
+    <!-- Quiz Section -->
+    <section class="quiz_box hidden">
+      <div id="quiz">
+        <h2 class="question" id="question">Quiz Question</h2>
+        <div class="timer">
+          <div class="time_text">Time Left</div>
+          <div class="time_sec" id="time">00:15</div>
+        </div>
+        <ul>
+          <li>
+            <input type="radio" name="answer" class="answer" id="a" />
+            <label for="a" id="option-1">Option 1</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" class="answer" id="b" />
+            <label for="b" id="option-2">Option 2</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" class="answer" id="c" />
+            <label for="c" id="option-3">Option 3</label>
+          </li>
+          <li>
+            <input type="radio" name="answer" class="answer" id="d" />
+            <label for="d" id="option-4">Option 4</label>
+          </li>
+        </ul>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="quiz_footer">
+        <div class="total_qus">
+          <span><p id="current-question">1</p>
+            of
+            <p>10</p>
+            Questions</span>
+        </div>
+        <div class="btn">
+          <button class="button" id="submit">Submit</button>
+        </div>
+        
+      </footer>
+    </section>
+
+    <!-- Result Box -->
+    <div class="result_box hidden">
+      <div class="icon"><i class="fas fa-crown"></i></div>
+      <div class="complete_text">You've completed the Quiz!</div>
+      <div class="quiz-result-box">
+        <h2>Quiz Results</h2>
+        <div class="result-item">
+            <span class="ca">Correct Answers:</span>
+            <span id="correct-count">0</span>
+        </div>
+        <div class="result-item">
+            <span class="wa">Wrong Answers:</span>
+            <span id="wrong-count">0</span>
+        </div>
+        <div class="result-item">
+            <span class="na">Not Attempted:</span>
+            <span id="not-attempted-count">0</span>
+        </div>
+        <div class="result-item">
+          <span class="tq">Total Questions:</span>
+          <span>10</span>
+      </div>
+    </div>
+      <div class="btn">
+        <button class="Continue" id="replay">Replay Quiz</button>
+        <button class="quit_btn" id="result-quit">Quit Quiz</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
